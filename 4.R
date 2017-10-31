@@ -4,6 +4,14 @@ ggplot(data= dimorph_data, aes(x= F_mass))+
   labs(x= "Female Mass(g)") + geom_histogram()
 ggplot(data= dimorph_data, aes(x= F_mass))+
   labs(x= "Female Mass(g)") + geom_histogram(fill= "blue")
-ggplot(data = dat, aes(x = F_mass)) +
+ggplot(data = dimorph_data, aes(x = F_mass)) +
   geom_histogram(fill = "blue", alpha = 0.3) + geom_histogram(aes(x = M_mass), alpha = 0.3) +
   scale_x_log10() + labs(x = "Female Mass(g)") 
+ggplot(data = dimorph_data, aes(x = F_mass)) +
+  geom_histogram(fill = "blue", alpha = 0.3) + geom_histogram(aes(x = M_mass), alpha = 0.3) +
+  scale_x_log10() + labs(x = "Female Mass(g)") +
+  facet_wrap(~ Family)
+ggplot(data = dimorph_data, aes(x = F_wing)) +
+  geom_histogram(fill = "blue", alpha = 0.3) + geom_histogram(aes(x = M_wing), alpha = 0.3) +
+  scale_x_log10() + labs(x = "Female Mass(g)") +
+  facet_wrap(~ Family)
